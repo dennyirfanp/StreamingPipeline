@@ -5,11 +5,8 @@ SETUP INSTRUCTIONS:
    pip install kafka-python pyspark
 
 2. Start Kafka:
-   # Start Zookeeper
-   bin/zookeeper-server-start.sh config/zookeeper.properties
-   
-   # Start Kafka Server
-   bin/kafka-server-start.sh config/server.properties
+   ## kafka
+`docker compose --profile kafka up -d`
    
    # Create Topic
    bin/kafka-topics.sh --create --topic purchasing-events --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
